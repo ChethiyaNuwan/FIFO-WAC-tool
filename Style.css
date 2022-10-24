@@ -5,26 +5,23 @@ body{
 .left{
     display: flex;
     flex:2;
-    background-color: azure;
-    height: ;
+    background-color:dimgrey;
 }
 
 .right{
     display: flex;
     flex:4;
     background-color:bisque;
-    height: ;
 }
 
 .input-side{
     width: 60%;
     display: table-cell;
-    border: 1px solid black;
     margin: 100px auto;
     height: 550px;
     overflow-y:inherit;
-    
-    
+    background-color: azure;
+    border-radius: 10px;
 }
 
 .form{
