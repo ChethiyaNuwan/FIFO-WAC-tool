@@ -5,22 +5,32 @@ body{
 .left{
     display: flex;
     flex:2;
-    background-color:dimgrey;
+    background-image: url("left bg.jpg");
+    background-size: cover;
+}
+
+label{
+    color: white;
+    text-align: left;
+}
+
+.mainInputs>*{
+    width: 200px;
 }
 
 .right{
     display: flex;
-    flex:4;
+    flex:5;
     background-color:bisque;
 }
 
 .input-side{
     width: 60%;
     display: table-cell;
-    margin: 100px auto;
-    height: 550px;
+    margin-inline: 20%;
+    margin-top: 10%;
+    height: 700px;
     overflow-y:inherit;
-    background-color: azure;
     border-radius: 10px;
 }
 
@@ -35,12 +45,7 @@ body{
     width: 150px;
 }
 
-#add{
-    
-    width: 100px;
-}
-
-#undo{    
+#add,#undo{
     width: 100px;
 }
 
