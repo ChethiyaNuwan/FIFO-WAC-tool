@@ -66,3 +66,11 @@ body{
 th,td{
     border: 1px solid black;
 }
+
+.rows{
+    display: none;
+}
+
+/*#r5,#r4,#r3{
+    display:table-row;
+}*/
