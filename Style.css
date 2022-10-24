@@ -17,6 +17,10 @@ body{
     border-collapse: collapse;
 }
 
-th,td{
+th{
+    border: 1px solid black;
+}
+
+.active>*{
     border: 1px solid black;
 }
