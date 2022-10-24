@@ -1,14 +1,63 @@
 body{
-    display: table-row
+    display: flex;
+}
+
+.left
+{
+    display: flex;
+    flex:2;
+    background-color: azure;
+    height: ;
+   
+    
+    
+}
+.right
+{
+    display: flex;
+    flex:4;
+    background-color:bisque;
+    height: ;
 }
 
 .input-side{
-    width: 30%;
+    width: 60%;
     display: table-cell;
+    border: 1px solid black;
+    margin: 100px auto;
+    height: 550px;
+    overflow-y:inherit;
+    
+    
+}
+.form{
+    text-align: center;
+    vertical-align: middle;
+    
+}
+#fifowac
+{
+    margin: 40px auto 40px;
+    width: 100px;
+}
+#add
+{
+    
+    width: 100px;
+}
+#undo
+{
+    
+    width: 100px;
+}
+#Reset{
+    width: 100px;
+    margin-bottom: 100px;
 }
 
+
 .table-side{
-    width: 70%;
+    
     display: table-cell;
     padding-left: 20px;
 }

@@ -6,105 +6,118 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stock Issuing Tool</title>
         <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="input-side">
-            <input type="button" value="FIFO" id="fifowac" onclick=""/><br>
-            <input type="radio" id="receipt">
-            <label for="issue">Receipt</label>
-            <input type="radio" id="issue">
-            <label for="issues">Issues</label><br>
-            <label for="date">Date:</label><br>
-            <input type="date" id="date"><br>
-            <label for="qty">Quantity:</label><br>
-            <input type="number" id="qty"><br>
-            <label for="unit-price">Unit Price:</label><br>
-            <input type="number" id="unit-price"><br>
-            <input type="button" value="Add" id="add" onclick=""/>
-            <input type="button" value="Undo" id="undo" onclick=""/><br>
-            <input type="button" value="Reset" id="Reset" onclick=""/>
+        <div class="left">
+            <div class="input-side">
+                <form class="form" >
+                <input type="button" value="FIFO" id="fifowac" class="btn btn-primary" onclick=""/><br>
+                <div class="rad1">
+                <input type="radio" id="receipt">
+                <label for="receipt">Receipt  </label>  &nbsp&nbsp
+                <input type="radio" id="issue">
+                <label for="issues">Issues</label>
+            </div>
+            <br>
+                <label for="date">Date:</label><br>
+                <input type="date" id="date"><br><br>
+                <label for="qty">Quantity:</label><br>
+                <input type="number" id="qty"><br><br>
+                <label for="unit-price">Unit Price:</label><br>
+                <input type="number" id="unit-price"><br><br>
+                <input type="button" value="Add" id="add" class="btn btn-primary" onclick=""/>
+                <input type="button" value="Undo" id="undo" class="btn btn-primary" onclick=""/><br><br>
+
+                <input type="button" value="Reset" id="Reset" class="btn btn-danger" onclick=""/>
+                <br>
+            </form>
+            </div>
         </div>
 
-        <div class="table-side">
-            <table class="table">
-                <tr>
-                    <th rowspan="2">Date</th>
-                    <th colspan="3">Receipts</th>
-                    <th colspan="3">Issues</th>
-                    <th colspan="3">Balance</th>
-                </tr>
-                <tr>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Balance</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Balance</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Balance</th>
-                </tr>
-                <tr class="row active" id="r1">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="row " id="r2">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="row " id="r3">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="row " id="r4">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="row " id="r5">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+
+        <div class="right">
+            <div class="table-side">
+                <table class="table table-dark table-striped-columns">
+                    <tr>
+                        <th rowspan="2">Date</th>
+                        <th colspan="3">Receipts</th>
+                        <th colspan="3">Issues</th>
+                        <th colspan="3">Balance</th>
+                    </tr>
+                    <tr>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Balance</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Balance</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Balance</th>
+                    </tr>
+                    <tr class="row active" id="r1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row " id="r2">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row " id="r3">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row " id="r4">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row " id="r5">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>
