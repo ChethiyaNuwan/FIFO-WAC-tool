@@ -2,18 +2,14 @@ body{
     display: flex;
 }
 
-.left
-{
+.left{
     display: flex;
     flex:2;
     background-color: azure;
     height: ;
-   
-    
-    
 }
-.right
-{
+
+.right{
     display: flex;
     flex:4;
     background-color:bisque;
@@ -30,26 +26,27 @@ body{
     
     
 }
+
 .form{
     text-align: center;
     vertical-align: middle;
     
 }
-#fifowac
-{
+
+#fifowac{
     margin: 40px auto 40px;
     width: 100px;
 }
-#add
-{
+
+#add{
     
     width: 100px;
 }
-#undo
-{
-    
+
+#undo{    
     width: 100px;
 }
+
 #Reset{
     width: 100px;
     margin-bottom: 100px;
@@ -57,7 +54,6 @@ body{
 
 
 .table-side{
-    
     display: table-cell;
     padding-left: 20px;
 }
