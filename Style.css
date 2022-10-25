@@ -21,7 +21,8 @@ label{
 .right{
     display: flex;
     flex:5;
-    background-color:bisque;
+    background-image: url("right bg.jpg");
+    background-size: cover;
 }
 
 .input-side{
@@ -66,6 +67,10 @@ label{
 
 .table-side{
     width: 98%;
+}
+
+h1{
+    color:azure;
 }
 
 th,td{
