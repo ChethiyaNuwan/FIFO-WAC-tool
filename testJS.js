@@ -26,3 +26,15 @@ function methodSwitch(){
         fifowacState = 'w';
     }
 }
+
+
+function chkType() {
+    if (document.getElementById('issue').checked) {
+        document.getElementById('unit-price').disabled="true";
+        document.getElementById('unit-price-lbl').style.color="grey";
+    }
+    else if(document.getElementById('receipt').checked){
+        document.getElementById('unit-price').disabled="";
+        document.getElementById('unit-price-lbl').style.color="white";
+    }
+}

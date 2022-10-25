@@ -15,10 +15,10 @@
             <form class="form" >
                 <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
             <div class="rad1">
-                <input type="radio" name="type" id="receipt">
+                <input type="radio" name="type" id="receipt" onclick="chkType()" checked>
                 <label for="receipt">Receipt  </label>  &nbsp&nbsp
-                <input type="radio" name="type" id="issue">
-                <label for="issues">Issues</label>
+                <input type="radio" name="type" id="issue" onclick="chkType()">
+                <label for="issues">Issue</label>
             </div>
             <br>
             <div class="mainInputs">
@@ -26,7 +26,7 @@
                 <input type="date" id="date"><br><br>
                 <label for="qty">Quantity:</label><br>
                 <input type="number" id="qty"><br><br>
-                <label for="unit-price">Unit Price:</label><br>
+                <label for="unit-price" id="unit-price-lbl">Unit Price:</label><br>
                 <input type="number" id="unit-price"><br><br>
             </div>
                 <input type="button" value="Add" id="add" class="btn btn-primary" onclick=""/>
