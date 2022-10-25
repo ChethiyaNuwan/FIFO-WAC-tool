@@ -79,6 +79,10 @@ th,td{
     text-align-last: center;
 }
 
+h5{
+    color:dimgrey;
+}
+
 .rows{
     display: none;
 }
