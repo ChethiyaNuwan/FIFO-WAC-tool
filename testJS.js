@@ -1,8 +1,16 @@
 var fifowacState = 'w';
 var rowNumber = 0;
 
-function tableSwitch(){
+function methodSwitch(){
     if (fifowacState == 'w') {
-        get
+        document.getElementById('balUP').style.display = "none";
+        document.getElementById('tableCap').innerHTML = "Inventory System on FIFO";
+        fifowacState = 'f';
+    }
+
+    else if (fifowacState == 'f') {
+        document.getElementById('balUP').style.display = "";
+        document.getElementById('tableCap').innerHTML = "Inventory System on WAC";
+        fifowacState = 'w';
     }
 }

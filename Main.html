@@ -13,7 +13,7 @@
         <div class="left">
             <div class="input-side">
             <form class="form" >
-                <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="tableSwith()"/><br>
+                <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
             <div class="rad1">
                 <input type="radio" name="type" id="receipt">
                 <label for="receipt">Receipt  </label>  &nbsp&nbsp
@@ -39,7 +39,7 @@
 
         <div class="right">
         <div class="table-side">
-            <center><h1>Inventory System on WAC</h1></center>
+            <h1 id="tableCap">Inventory System on WAC</h1>
             <table class="table table-dark table-striped-columns">
                 <tr>
                     <th rowspan="2">Date</th>
@@ -54,7 +54,7 @@
                     <th>Unit Price</th>
                     <th>Quantity</th>
                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
-                    <th class="balUP">Unit Price</th>
+                    <th id="balUP">Unit Price</th>
                     <th>Quantity</th>
                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
                 </tr>
