@@ -55,7 +55,7 @@ if ($conn->connect_error) {
         <div class="right">
         <div class="table-side">
             <h1 id="tableCap">Inventory System on WAC</h1>
-            <table class="table table-dark table-striped-columns">
+            <table class="table table-dark table-striped-columns" id="wac">
                 <tr>
                     <th rowspan="2">Date</th>
                     <th colspan="3">Receipts</th>
@@ -69,7 +69,7 @@ if ($conn->connect_error) {
                     <th>Unit Price</th>
                     <th>Quantity</th>
                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
-                    <th class="balUP">Unit Price</th>
+                    <th>Unit Price</th>
                     <th>Quantity</th>
                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
                 </tr>
@@ -81,7 +81,7 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="balUP"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -93,7 +93,7 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="balUP"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -105,7 +105,7 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="balUP"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -117,7 +117,7 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="balUP"></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -129,7 +129,81 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="balUP"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table class="table table-dark table-striped-columns" id="fifo" hidden>
+                <tr>
+                    <th rowspan="2">Date</th>
+                    <th colspan="3">Receipts</th>
+                    <th colspan="3">Issues</th>
+                    <th colspan="3" id="balance">Balance</th>
+                </tr>
+                <tr>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
+                    <th>Quantity</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Value&emsp;</th>
+                </tr>
+                <tr class="rows" id="r1">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="rows" id="r2">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="rows" id="r3">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="rows" id="r4">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="rows" id="r5">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
