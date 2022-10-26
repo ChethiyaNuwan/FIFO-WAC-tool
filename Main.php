@@ -354,10 +354,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f2">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -378,10 +376,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f4">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -402,10 +398,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f6">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -426,10 +420,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f8">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -450,10 +442,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f10">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -474,10 +464,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f12">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -498,10 +486,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f14">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -522,10 +508,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f16">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -546,10 +530,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f18">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -570,7 +552,6 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f20">
                     <td></td>
@@ -582,10 +563,8 @@ if ($conn->connect_error) {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr class="rows" id="f21">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
