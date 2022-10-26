@@ -77,16 +77,13 @@ h1{
 th,td{
     border: 1px solid black;
     text-align-last: center;
+    vertical-align: middle;
 }
 
 h5{
     color:dimgrey;
 }
 
-.rows{
-    display: none;
+td{
+    height: 25px;
 }
-
-/*#r5,#r4,#r3{
-    display:table-row;
-}*/
