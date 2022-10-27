@@ -41,11 +41,11 @@ label{
     width: 150px;
 }
 
-#add,#undo{
+#addBtn,#undoBtn{
     width: 100px;
 }
 
-#Reset{
+#resetBtn{
     width: 100px;
     margin-bottom: 100px;
 }
