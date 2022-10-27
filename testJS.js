@@ -2,8 +2,6 @@ var fifowacState = 'w';
 var rowNumber = 0;
 
 function methodSwitch(){
-    var balUPs=document.getElementsByClassName('balUP');
-
     if (fifowacState == 'w') {
         document.getElementById('tableCap').innerHTML = "Inventory System on FIFO";
         document.getElementById('fifowac').value = "Switch to WAC";
