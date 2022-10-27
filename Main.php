@@ -20,11 +20,26 @@ if (isset($_GET['addBtn'])) {
 
     if($type === "r"){
         $up = $_GET['unit-price'];
+        
+        //getting last balance
+        $sql = "SELECT Bqty,Bval FROM wac ORDER BY date DESC LIMIT 1;";
+        $Bal = mysqli_fetch_array(mysqli_query($conn,$sql));
 
+        //updating receipt
         $val = $qty * $up;
         $sql = "INSERT INTO wac(date,Rup,Rqty,Rval) VALUES ('$date','$up','$qty','$val')";
         mysqli_query($conn,$sql);
+
+        //calculating new balance
+        $newBqty = $Bal['Bqty'] + $qty;
+        $newBval = $Bal['Bval'] + $val;
+        $newBup = $newBval / $newBqty;
+
+        //updating balance
+        $sql = "UPDATE wac SET Bqty='$newBqty',Bval='$newBval',Bup='$newBup' ORDER BY date DESC LIMIT 1;";
+        mysqli_query($conn,$sql);
     }
+
     elseif ($type === "i") {
         $sql = "SELECT date FROM wac WHERE date='$date'";
 
@@ -37,6 +52,7 @@ if (isset($_GET['addBtn'])) {
             mysqli_query($conn,$sql);
         }
     }
+    
     elseif ($type === "b") {
         $up = $_GET['unit-price'];
 
@@ -44,6 +60,13 @@ if (isset($_GET['addBtn'])) {
         $sql = "INSERT INTO wac(date,Bup,Bqty,Bval) VALUES ('$date','$up','$qty','$val')";
         mysqli_query($conn,$sql);
     }
+}
+
+
+//undo last row
+if (isset($_GET['undoBtn'])) {
+    $sql = "DELETE FROM wac ORDER BY date DESC LIMIT 1";
+    mysqli_query($conn,$sql);
 }
 
 
