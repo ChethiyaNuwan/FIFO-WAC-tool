@@ -20,9 +20,16 @@ $wacRowLength=count($wacRow,0);
 function store(){
     $date = $_POST['date'];
     $up = $_POST['unit-price'];
-    $qty = $_POST['qty'];
+    $qty = $_POST['type'];
     echo $date;
+    echo $up;
+    //echo $qty;
 }
+
+if (isset($_POST['addBtn'])) {
+    store();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,26 +47,29 @@ function store(){
         <div class="left">
             <div class="input-side">
                 <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
+            <form id="form" method="post">
             <div class="rad1">
-                <input type="radio" name="type" id="receipt" onclick="chkType()" checked>
+                <input type="radio" name="type" id="receipt" class="form-check-input" onclick="chkType()" checked>
                 <label for="receipt">Receipt  </label>  &nbsp&nbsp
-                <input type="radio" name="type" id="issue" onclick="chkType()">
+                <input type="radio" name="type" id="issue" class="form-check-input" onclick="chkType()">
                 <label for="issues">Issue</label>
             </div>
             <br>
-            <form class="mainInputs" id="form" method="post">
+            <div class="mainInputs">
                 <label for="date">Date:</label><br>
                 <input type="date" id="date" name="date"><br><br>
                 <label for="qty">Quantity:</label><br>
                 <input type="number" id="qty" name="qty"><br><br>
                 <label for="unit-price" id="unit-price-lbl">Unit Price:</label><br>
-                <input type="number" id="unit-price" name="unit-price"><br><br>
-                <input type="submit" value="Add" id="add" class="btn btn-primary" onclick=""/>
-                <input type="submit" value="Undo" id="undo" class="btn btn-primary" onclick=""/><br><br>
-                <input type="submit" value="Reset" id="Reset" class="btn btn-danger" onclick=""/>
-            </form>
-                <br>
+                <input type="number" id="unit-price" name="unit-price"><br><br><br>
+                
+                <input type="submit" value="Add" id="addBtn" name="addBtn" class="btn btn-primary" onclick=""/>
+                <input type="submit" value="Undo" id="undoBtn" name="undoBtn" class="btn btn-primary" onclick=""/><br><br>
+                <input type="submit" value="Reset" id="resetBtn" name="resetBtn" class="btn btn-danger" onclick=""/>
+            </div>
                 <h5>created by team<br>smashAudit</h5>
+            </form>
+                
             </div>
         </div>
 

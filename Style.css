@@ -27,9 +27,8 @@ label{
 
 .input-side{
     width: 60%;
-    display: table-cell;
     margin-inline: 20%;
-    margin-top: 10%;
+    margin-top: 8%;
     height: 700px;
     overflow-y:inherit;
     text-align: center;
@@ -52,7 +51,6 @@ label{
 
 
 .table-side{
-    display: table-cell;
     padding-left: 20px;
 }
 
