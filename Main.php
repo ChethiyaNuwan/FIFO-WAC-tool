@@ -18,22 +18,22 @@ if (isset($_GET['addBtn'])) {
     $date = $_GET['date'];
     $qty = $_GET['qty'];
 
+    //getting last balance
+    $sql = "SELECT Bqty,Bval,Bup FROM wac ORDER BY date DESC LIMIT 1;";
+    $Bal = mysqli_fetch_array(mysqli_query($conn,$sql));
+
     if($type === "r"){
         $up = $_GET['unit-price'];
-        
-        //getting last balance
-        $sql = "SELECT Bqty,Bval FROM wac ORDER BY date DESC LIMIT 1;";
-        $Bal = mysqli_fetch_array(mysqli_query($conn,$sql));
 
         //updating receipt
-        $val = $qty * $up;
+        $val = round($qty * $up,2);
         $sql = "INSERT INTO wac(date,Rup,Rqty,Rval) VALUES ('$date','$up','$qty','$val')";
         mysqli_query($conn,$sql);
 
         //calculating new balance
         $newBqty = $Bal['Bqty'] + $qty;
         $newBval = $Bal['Bval'] + $val;
-        $newBup = $newBval / $newBqty;
+        $newBup = round($newBval / $newBqty,2);
 
         //updating balance
         $sql = "UPDATE wac SET Bqty='$newBqty',Bval='$newBval',Bup='$newBup' ORDER BY date DESC LIMIT 1;";
@@ -41,14 +41,20 @@ if (isset($_GET['addBtn'])) {
     }
 
     elseif ($type === "i") {
+        //calculating new balance and issue
+        $Iup = $Bal['Bup'];
+        $Ival = round($qty * $Iup,2);
+        $newBqty = $Bal['Bqty'] - $qty;
+        $newBval = $Bal['Bval'] - $Ival;
+
         $sql = "SELECT date FROM wac WHERE date='$date'";
 
         if (mysqli_num_rows(mysqli_query($conn,$sql))) {
-            $sql = "UPDATE wac SET Iqty='$qty' WHERE date";
+            $sql = "UPDATE wac SET Iqty='$qty',Iup='$Iup',Ival='$Ival',Bqty='$newBqty',Bval='$newBval' WHERE date='$date'";
             mysqli_query($conn,$sql);
         } 
         else {
-            $sql = "INSERT INTO wac(date,Iqty) VALUES ('$date','$qty')";
+            $sql = "INSERT INTO wac(date,Iqty,Iup,Ival,Bqty,Bval,Bup) VALUES ('$date','$qty','$Iup','$Ival','$newBqty','$newBval','$Iup')";
             mysqli_query($conn,$sql);
         }
     }
@@ -56,7 +62,7 @@ if (isset($_GET['addBtn'])) {
     elseif ($type === "b") {
         $up = $_GET['unit-price'];
 
-        $val = $qty * $up;
+        $val = round($qty * $up,2);
         $sql = "INSERT INTO wac(date,Bup,Bqty,Bval) VALUES ('$date','$up','$qty','$val')";
         mysqli_query($conn,$sql);
     }
