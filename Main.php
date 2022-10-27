@@ -23,8 +23,6 @@ function store(){
     $qty = $_POST['qty'];
     echo $date;
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +39,6 @@ function store(){
     <body>
         <div class="left">
             <div class="input-side">
-            <form class="form" id="form" method="post">
                 <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
             <div class="rad1">
                 <input type="radio" name="type" id="receipt" onclick="chkType()" checked>
@@ -50,20 +47,19 @@ function store(){
                 <label for="issues">Issue</label>
             </div>
             <br>
-            <div class="mainInputs">
+            <form class="mainInputs" id="form" method="post">
                 <label for="date">Date:</label><br>
-                <input type="date" id="date"><br><br>
+                <input type="date" id="date" name="date"><br><br>
                 <label for="qty">Quantity:</label><br>
-                <input type="number" id="qty"><br><br>
+                <input type="number" id="qty" name="qty"><br><br>
                 <label for="unit-price" id="unit-price-lbl">Unit Price:</label><br>
-                <input type="number" id="unit-price"><br><br>
-            </div>
-                <input type="button" value="Add" id="add" class="btn btn-primary" onclick="submit()"/>
-                <input type="button" value="Undo" id="undo" class="btn btn-primary" onclick=""/><br><br>
-                <input type="button" value="Reset" id="Reset" class="btn btn-danger" onclick=""/>
+                <input type="number" id="unit-price" name="unit-price"><br><br>
+                <input type="submit" value="Add" id="add" class="btn btn-primary" onclick=""/>
+                <input type="submit" value="Undo" id="undo" class="btn btn-primary" onclick=""/><br><br>
+                <input type="submit" value="Reset" id="Reset" class="btn btn-danger" onclick=""/>
+            </form>
                 <br>
                 <h5>created by team<br>smashAudit</h5>
-            </form>
             </div>
         </div>
 
