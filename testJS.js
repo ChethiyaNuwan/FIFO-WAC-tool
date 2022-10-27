@@ -25,7 +25,7 @@ function chkType() {
         document.getElementById('unit-price').disabled="true";
         document.getElementById('unit-price-lbl').style.color="grey";
     }
-    else if(document.getElementById('receipt').checked){
+    else{
         document.getElementById('unit-price').disabled="";
         document.getElementById('unit-price-lbl').style.color="white";
     }
