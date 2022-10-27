@@ -32,7 +32,6 @@ label{
     margin-top: 10%;
     height: 700px;
     overflow-y:inherit;
-    border-radius: 10px;
     text-align: center;
     vertical-align: middle;
 }
@@ -79,10 +78,6 @@ th,td{
 
 h5{
     color:dimgrey;
-}
-
-td{
-    height: 35px;
 }
 
 .date{
