@@ -47,6 +47,12 @@ if (isset($_GET['addBtn'])) {
 }
 
 
+//reset entire table
+if (isset($_GET['resetBtn'])) {
+    $sql = "DELETE FROM wac";
+    mysqli_query($conn,$sql);
+}
+
 // access wac table and put values into an array
 $wacTable = mysqli_query($conn, "SELECT * FROM wac");
 for ($wacRow = array (); $row = $wacTable->fetch_assoc(); $wacRow[] = $row);
