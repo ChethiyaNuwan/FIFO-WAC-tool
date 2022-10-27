@@ -30,3 +30,9 @@ function chkType() {
         document.getElementById('unit-price-lbl').style.color="white";
     }
 }
+
+
+function submit() {
+    let form = document.getElementById("form");
+    form.submit();
+}
