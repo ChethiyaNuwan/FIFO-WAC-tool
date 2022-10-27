@@ -26,7 +26,6 @@ if (isset($_GET['addBtn'])) {
         mysqli_query($conn,$sql);
     }
     elseif ($type === "i") {
-        echo "in";
         $sql = "SELECT date FROM wac WHERE date='$date'";
 
         if (mysqli_num_rows(mysqli_query($conn,$sql))) {
@@ -37,6 +36,13 @@ if (isset($_GET['addBtn'])) {
             $sql = "INSERT INTO wac(date,Iqty) VALUES ('$date','$qty')";
             mysqli_query($conn,$sql);
         }
+    }
+    elseif ($type === "b") {
+        $up = $_GET['unit-price'];
+
+        $val = $qty * $up;
+        $sql = "INSERT INTO wac(date,Bup,Bqty,Bval) VALUES ('$date','$up','$qty','$val')";
+        mysqli_query($conn,$sql);
     }
 }
 
@@ -66,9 +72,11 @@ $wacRowLength=count($wacRow,0);
             <form id="form" method="GET">
             <div class="rad1">
                 <input type="radio" name="type" value="r" id="receipt" class="form-check-input" onclick="chkType()">
-                <label for="receipt">Receipt  </label>  &nbsp&nbsp
+                <label for="receipt">Receipt</label>&nbsp&nbsp&nbsp&nbsp
                 <input type="radio" name="type" value="i" id="issue" class="form-check-input" onclick="chkType()">
-                <label for="issues">Issue</label>
+                <label for="issues">Issue</label>&nbsp&nbsp&nbsp&nbsp
+                <input type="radio" name="type" value="b" id="balance" class="form-check-input" onclick="chkType()">
+                <label for="issues">Balance</label>
             </div>
             <br>
             <div class="mainInputs">
