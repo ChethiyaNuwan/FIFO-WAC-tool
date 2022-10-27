@@ -11,24 +11,40 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+
+//get main inputs to php and insert into wac table
+if (isset($_GET['addBtn'])) {
+    $type = $_GET['type'];
+    $date = $_GET['date'];
+    $qty = $_GET['qty'];
+
+    if($type === "r"){
+        $up = $_GET['unit-price'];
+
+        $val = $qty * $up;
+        $sql = "INSERT INTO wac(date,Rup,Rqty,Rval) VALUES ('$date','$up','$qty','$val')";
+        mysqli_query($conn,$sql);
+    }
+    elseif ($type === "i") {
+        echo "in";
+        $sql = "SELECT date FROM wac WHERE date='$date'";
+
+        if (mysqli_num_rows(mysqli_query($conn,$sql))) {
+            $sql = "UPDATE wac SET Iqty='$qty' WHERE date";
+            mysqli_query($conn,$sql);
+        } 
+        else {
+            $sql = "INSERT INTO wac(date,Iqty) VALUES ('$date','$qty')";
+            mysqli_query($conn,$sql);
+        }
+    }
+}
+
+
 // access wac table and put values into an array
 $wacTable = mysqli_query($conn, "SELECT * FROM wac");
 for ($wacRow = array (); $row = $wacTable->fetch_assoc(); $wacRow[] = $row);
 $wacRowLength=count($wacRow,0);
-
-//get main inputs to php and insert into wac table
-function store(){
-    $date = $_POST['date'];
-    $up = $_POST['unit-price'];
-    $qty = $_POST['type'];
-    echo $date;
-    echo $up;
-    //echo $qty;
-}
-
-if (isset($_POST['addBtn'])) {
-    store();
-}
 
 ?>
 
@@ -47,11 +63,11 @@ if (isset($_POST['addBtn'])) {
         <div class="left">
             <div class="input-side">
                 <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
-            <form id="form" method="post">
+            <form id="form" method="GET">
             <div class="rad1">
-                <input type="radio" name="type" id="receipt" class="form-check-input" onclick="chkType()" checked>
+                <input type="radio" name="type" value="r" id="receipt" class="form-check-input" onclick="chkType()">
                 <label for="receipt">Receipt  </label>  &nbsp&nbsp
-                <input type="radio" name="type" id="issue" class="form-check-input" onclick="chkType()">
+                <input type="radio" name="type" value="i" id="issue" class="form-check-input" onclick="chkType()">
                 <label for="issues">Issue</label>
             </div>
             <br>
