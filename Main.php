@@ -103,8 +103,13 @@ $wacRowLength=count($wacRow,0);
     <body>
         <div class="left">
             <div class="input-side">
-                <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
             <form id="form" method="GET">
+            <div id="toggle">
+                    <div class="switchText" id="toggleWAC">WAC</div>
+                    <input type="checkbox" name="switch" id="switch" onclick="methodSwitch()">
+                    <label for="switch" id="switchLbl"></label>
+                    <div class="switchText" id="toggleFIFO">FIFO</div>
+            </div> 
             <div class="rad1">
                 <input type="radio" name="type" value="r" id="receipt" class="form-check-input" onclick="chkType()">
                 <label for="receipt">Receipt</label>&nbsp&nbsp&nbsp&nbsp

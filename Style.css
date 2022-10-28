@@ -81,3 +81,67 @@ h5{
 .date{
     width: 100px;
 }
+
+
+/*for switch*/
+#switch{
+    display: none;
+}
+
+#switchLbl{
+    width: 100px;
+    height: 40px;
+    background-color:lightseagreen;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px #477a8550;
+    display: block;
+}        
+
+#switchLbl::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color:aliceblue;
+    position: absolute;
+    border-radius:70px;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s;
+}
+
+#switch:checked + #switchLbl:after{
+    left:calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+#switchLbl:active:after{
+    width: 115px;
+}
+
+#switch:checked + #switchLbl{
+    background-color:cornflowerblue;
+}
+
+#toggle{
+    display: table-row;
+}
+
+.switchText{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100px;
+    color: azure;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.rad1{
+    padding-top: 80px;
+    padding-bottom: 10px;
+}

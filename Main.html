@@ -13,7 +13,12 @@
         <div class="left">
             <div class="input-side">
             <form class="form" >
-                <input type="button" value="Switch to FIFO" id="fifowac" class="btn btn-success" onclick="methodSwitch()"/><br>
+                <div id="toggle">
+                    <div class="switchText">WAC</div>
+                    <input type="checkbox" name="switch" id="switch">
+                    <label for="switch" id="switchLbl" class="switchText"></label>
+                    <div class="switchText">FIFO</div>
+                </div>            
             <div class="rad1">
                 <input type="radio" name="type" id="receipt" onclick="chkType()" checked>
                 <label for="receipt">Receipt  </label>  &nbsp&nbsp

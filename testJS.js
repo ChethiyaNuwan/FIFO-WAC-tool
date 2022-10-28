@@ -4,7 +4,8 @@ var rowNumber = 0;
 function methodSwitch(){
     if (fifowacState == 'w') {
         document.getElementById('tableCap').innerHTML = "Inventory System on FIFO";
-        document.getElementById('fifowac').value = "Switch to WAC";
+        document.getElementById('toggleWAC').style.color="grey";
+        document.getElementById('toggleFIFO').style.color="azure";
         document.getElementById('wac').hidden = "true";
         document.getElementById('fifo').hidden = "";
         fifowacState = 'f';
@@ -12,7 +13,8 @@ function methodSwitch(){
 
     else if (fifowacState == 'f') {
         document.getElementById('tableCap').innerHTML = "Inventory System on WAC";
-        document.getElementById('fifowac').value = "Switch to FIFO";
+        document.getElementById('toggleWAC').style.color="azure";
+        document.getElementById('toggleFIFO').style.color="grey";
         document.getElementById('wac').hidden = "";
         document.getElementById('fifo').hidden = "true";
         fifowacState = 'w';
